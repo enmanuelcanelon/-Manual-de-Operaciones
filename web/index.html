@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Manual interno de operaciones, tarifario y contrataciones para el equipo de ventas." />
+    <title>Manual de Operaciones y Contrataciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app-content">Saltar al contenido</a>
+
+    <div class="app">
+      <header class="header">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+          <span></span>
+        </button>
+        <div class="header__brand">
+          <div class="header__logo" aria-hidden="true">MO</div>
+          <div class="header__titles">
+            <strong>Manual de Operaciones</strong>
+            <span>Tarifario · Paquetes · Políticas</span>
+          </div>
+        </div>
+        <div class="header__actions">
+          <span class="badge badge--warn" id="override-badge" hidden>0 local</span>
+          <label class="toggle" title="Desactiva en tablets de sala">
+            <input type="checkbox" id="edit-toggle" checked />
+            <span id="edit-label">Modo edición</span>
+          </label>
+        </div>
+      </header>
+
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+      <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+        <p class="nav-label">Manual</p>
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" data-nav="home" href="#/">
+              <span class="nav-link__icon">⌂</span> Inicio
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" data-nav="salones" href="#/salones">
+              <span class="nav-link__icon">◇</span> Salones
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" data-nav="paquetes" href="#/paquetes">
+              <span class="nav-link__icon">▣</span> Paquetes
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" data-nav="baby-shower" href="#/baby-shower">
+              <span class="nav-link__icon">♡</span> Baby Shower
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" data-nav="servicios" href="#/servicios">
+              <span class="nav-link__icon">$</span> A la carta
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" data-nav="personal" href="#/personal">
+              <span class="nav-link__icon">👤</span> Personal
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" data-nav="politicas" href="#/politicas">
+              <span class="nav-link__icon">§</span> Políticas
+            </a>
+          </li>
+        </ul>
+        <p class="nav-label">Admin</p>
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" data-nav="editar" href="#/editar">
+              <span class="nav-link__icon">✎</span> Edición / Backup
+            </a>
+          </li>
+        </ul>
+        <p class="tiny faint" style="margin-top:1.5rem;padding:0 0.75rem;line-height:1.4">
+          Uso interno. Precios oficiales en <code>seed.json</code>. Cambios del navegador = borrador local.
+        </p>
+      </aside>
+
+      <main class="main">
+        <div class="content" id="app-content" tabindex="-1">
+          <p class="muted">Cargando manual…</p>
+        </div>
+      </main>
+    </div>
+
+    <nav class="bottom-nav" aria-label="Navegación móvil">
+      <a data-nav="home" href="#/"><span>⌂</span><span>Inicio</span></a>
+      <a data-nav="paquetes" href="#/paquetes"><span>▣</span><span>Paquetes</span></a>
+      <a data-nav="servicios" href="#/servicios"><span>$</span><span>Precios</span></a>
+      <a data-nav="politicas" href="#/politicas"><span>§</span><span>Reglas</span></a>
+      <a data-nav="editar" href="#/editar"><span>✎</span><span>Edit</span></a>
+    </nav>
+
+    <div class="toast-host" id="toast-host" aria-live="polite"></div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "meta": {
+    "currency": "USD",
+    "locale": "es",
+    "updatedAt": "2026-08-05",
+    "title": "Manual de Operaciones y Contrataciones",
+    "sourceFiles": [
+      "01. Tarifario y Politicas del Salon.md",
+      "02. Resumen del Esquema de Personal.md",
+      "03. Tarifas por Día del Salón Diamond y Revolution.md",
+      "04. Políticas de Negociación, Intercambio de Servicios y Descuentos Permitidos..md"
+    ]
+  },
+  "fees": {
+    "serviceFeePercent": 18,
+    "taxPercent": 7,
+    "notes": "Todos los paquetes llevan 18% Service Fee + 7% Tax por defecto."
+  },
+  "venues": [
+    {
+      "id": "diamond",
+      "name": "Salón Diamond",
+      "capacityMax": 200,
+      "hourlyRate": 500,
+      "minHours": 4,
+      "extraHourWithPackage": 800,
+      "extraHourWithoutPackage": 500,
+      "locationNote": "Doral"
+    },
+    {
+      "id": "revolution",
+      "name": "Salón Revolution",
+      "capacityMax": 70,
+      "hourlyRate": 300,
+      "minHours": 4,
+      "extraHourWithPackage": 600,
+      "extraHourWithoutPackage": 300,
+      "locationNote": null
+    }
+  ],
+  "schedules": {
+    "generalHourlySale": {
+      "days": ["tuesday", "wednesday", "thursday", "sunday"],
+      "window": "10:00–17:00",
+      "notes": "Solo se vende el salón por hora. Si el evento es dentro de menos de un mes se puede vender cualquier hora excepto sábado, o si no hay eventos."
+    },
+    "packageByDay": {
+      "friday": ["13:00–17:00", "20:00–02:00"],
+      "saturday": ["13:00–17:00", "20:00–02:00"],
+      "sunday": ["12:00–16:00", "18:00–02:00"]
+    },
+    "babyShower": {
+      "regularWindow": "12:00–16:00",
+      "allowedDays": ["tuesday", "wednesday", "thursday"],
+      "saturdayException": "13:00–17:00",
+      "priorityRule": "Priorizar siempre la reserva de sábados para paquetes de eventos grandes."
+    }
+  },
+  "services": [
+    { "id": "hora_loca", "name": "Hora Loca", "category": "entretenimiento", "pricingType": "flat", "amount": 450, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "piso_luminico", "name": "Piso Lumínico", "category": "decoracion", "pricingType": "flat", "amount": 1200, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "dj", "name": "DJ (4 horas / Show)", "category": "entretenimiento", "pricingType": "flat", "amount": 350, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "mapping", "name": "Mapping", "category": "entretenimiento", "pricingType": "flat", "amount": 0, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "deco_basica", "name": "Decoración Básica (State y mesas)", "category": "decoracion", "pricingType": "flat", "amount": 380, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "deco_premium", "name": "Decoración Premium (Full)", "category": "decoracion", "pricingType": "additive", "amount": 380, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": "Precio variable según diseño." },
+    { "id": "cake", "name": "Cake", "category": "catering", "pricingType": "per_person", "amount": 2, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "comida", "name": "Comida", "category": "catering", "pricingType": "per_person", "amount": 7, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "mesa_quesos", "name": "Mesa de quesos", "category": "catering", "pricingType": "per_person", "amount": 3, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "mesa_dulces", "name": "Mesa de dulces", "category": "catering", "pricingType": "per_person", "amount": 3, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "pasapalos", "name": "Pasapalos", "category": "catering", "pricingType": "per_person", "amount": 6, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "animador", "name": "Animador", "category": "entretenimiento", "pricingType": "flat", "amount": 350, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "bailarina", "name": "Bailarina", "category": "entretenimiento", "pricingType": "flat", "amount": 350, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "maestro_ceremonia", "name": "Maestro de ceremonia", "category": "entretenimiento", "pricingType": "flat", "amount": 350, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "photobooth_360", "name": "Photobooth 360", "category": "foto", "pricingType": "flat", "amount": 350, "unit": null, "packageOnly": false, "venueRestriction": ["revolution"], "notes": "Solo Revolution" },
+    { "id": "photobooth_print", "name": "Photobooth Print", "category": "foto", "pricingType": "flat", "amount": 450, "unit": null, "packageOnly": false, "venueRestriction": ["diamond"], "notes": "Solo Diamond" },
+    { "id": "bar_house", "name": "Bar Abierto Licor House", "category": "bar", "pricingType": "per_person", "amount": 10, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": "4 horas" },
+    { "id": "bar_premium", "name": "Bar Abierto Licor Premium", "category": "bar", "pricingType": "per_person", "amount": 18, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": "4 horas" },
+    { "id": "champana", "name": "Champaña", "category": "bar", "pricingType": "flat", "amount": 15, "unit": "botella", "packageOnly": false, "venueRestriction": [], "notes": "1 botella cubre 8 personas", "servesPeople": 8 },
+    { "id": "sidra", "name": "Sidra", "category": "bar", "pricingType": "flat", "amount": 6, "unit": "botella", "packageOnly": false, "venueRestriction": [], "notes": "1 botella cubre 8 personas", "servesPeople": 8 },
+    { "id": "vajilla", "name": "Vajilla / Platos / Cubiertos / Chafing Dish", "category": "catering", "pricingType": "per_person", "amount": 10, "unit": "persona", "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "personal_servicio", "name": "Personal de Servicio", "category": "personal", "pricingType": "flat", "amount": 150, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": "6 horas" },
+    { "id": "violinista", "name": "Violinista", "category": "entretenimiento", "pricingType": "flat", "amount": 350, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "deco_exterior", "name": "Decoración Exterior (Bebida y pasapalos)", "category": "decoracion", "pricingType": "flat", "amount": 600, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "foto_sola", "name": "Fotografía Solo Foto", "category": "foto", "pricingType": "flat", "amount": 550, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "foto_video_album", "name": "Foto + Video + Álbum + Afiche", "category": "foto", "pricingType": "flat", "amount": 1000, "unit": null, "packageOnly": false, "venueRestriction": [], "notes": null },
+    { "id": "mesas_sillas", "name": "Mesas y sillas", "category": "salon", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": null },
+    { "id": "luces", "name": "Luces", "category": "salon", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": null },
+    { "id": "sonido", "name": "Sistema de sonido", "category": "salon", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": null },
+    { "id": "servicio", "name": "Servicio (staff de paquete)", "category": "personal", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": null },
+    { "id": "pantalla_luces", "name": "Pantalla LED / Video / Luces", "category": "salon", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": null },
+    { "id": "alquiler_salon", "name": "Alquiler de salón", "category": "salon", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": "Incluido en precio de paquete Baby Shower" },
+    { "id": "vino", "name": "Servicio de vino", "category": "bar", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": "Baby Shower" },
+    { "id": "limusina", "name": "Limusina", "category": "extras", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": "Intercambiable por Hora Loca" },
+    { "id": "hora_extra_evento", "name": "1 hora extra de evento", "category": "salon", "pricingType": "derived", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": "Valor de referencia = hora extra con paquete del salón" },
+    { "id": "aperitivos", "name": "Aperitivos / entradas", "category": "catering", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": null },
+    { "id": "meseros_bs", "name": "Meseros / Servers", "category": "personal", "pricingType": "included", "amount": null, "unit": null, "packageOnly": true, "venueRestriction": [], "notes": "Baby Shower" }
+  ],
+  "packages": [
+    {
+      "id": "gold",
+      "name": "Gold",
+      "family": "event",
+      "tierOrder": 1,
+      "venueIds": ["revolution"],
+      "isCompletePackage": true,
+      "description": "Servicios base esenciales sin licor: mesas, sillas, luces, sonido, servicio, comida, vajilla, DJ 4h y pantalla/luces. Solo disponible en Salón Revolution.",
+      "inclusionServiceIds": ["mesas_sillas", "luces", "sonido", "servicio", "comida", "vajilla", "dj", "pantalla_luces"]
+    },
+    {
+      "id": "platino",
+      "name": "Platino",
+      "family": "event",
+      "tierOrder": 2,
+      "venueIds": ["diamond", "revolution"],
+      "isCompletePackage": true,
+      "description": "Todo Gold + bar abierto House, pastel y personal de servicio.",
+      "inclusionServiceIds": ["mesas_sillas", "luces", "sonido", "servicio", "comida", "vajilla", "dj", "pantalla_luces", "bar_house", "cake", "personal_servicio"]
+    },
+    {
+      "id": "diamante",
+      "name": "Diamante",
+      "family": "event",
+      "tierOrder": 3,
+      "venueIds": ["diamond", "revolution"],
+      "isCompletePackage": true,
+      "description": "Todo Platino + 1 hora extra de evento, limusina y mesa de quesos.",
+      "inclusionServiceIds": ["mesas_sillas", "luces", "sonido", "servicio", "comida", "vajilla", "dj", "pantalla_luces", "bar_house", "cake", "personal_servicio", "hora_extra_evento", "limusina", "mesa_quesos"]
+    },
+    {
+      "id": "deluxe",
+      "name": "Deluxe",
+      "family": "event",
+      "tierOrder": 4,
+      "venueIds": ["diamond"],
+      "isCompletePackage": true,
+      "description": "Todo Diamante + foto/video/álbum/afiche, Hora Loca, aperitivos, licores premium y decoración premium interior y exterior. Solo Salón Diamond (Doral).",
+      "inclusionServiceIds": ["mesas_sillas", "luces", "sonido", "servicio", "comida", "vajilla", "dj", "pantalla_luces", "bar_house", "cake", "personal_servicio", "hora_extra_evento", "limusina", "mesa_quesos", "foto_video_album", "hora_loca", "aperitivos", "bar_premium", "deco_premium", "deco_exterior"]
+    },
+    {
+      "id": "bs_basico",
+      "name": "Baby Shower Básico",
+      "family": "baby_shower",
+      "tierOrder": 10,
+      "venueIds": ["diamond", "revolution"],
+      "isCompletePackage": false,
+      "description": "Paquete Baby Shower sin DJ: alquiler, comida, LED, decoración básica, pastel, meseros, sonido, vajilla y vino.",
+      "inclusionServiceIds": ["alquiler_salon", "comida", "pantalla_luces", "deco_basica", "cake", "meseros_bs", "sonido", "vajilla", "vino"]
+    },
+    {
+      "id": "bs_completo",
+      "name": "Baby Shower Completo",
+      "family": "baby_shower",
+      "tierOrder": 11,
+      "venueIds": ["diamond", "revolution"],
+      "isCompletePackage": true,
+      "description": "Básico + DJ profesional y bar abierto Licor House.",
+      "inclusionServiceIds": ["alquiler_salon", "comida", "pantalla_luces", "deco_basica", "cake", "meseros_bs", "sonido", "vajilla", "vino", "dj", "bar_house"]
+    }
+  ],
+  "packagePrices": [
+    { "packageId": "platino", "venueId": "diamond", "day": "friday", "status": "available", "price": 8500 },
+    { "packageId": "platino", "venueId": "diamond", "day": "saturday", "status": "available", "price": 8500 },
+    { "packageId": "platino", "venueId": "diamond", "day": "sunday", "status": "available", "price": 5000 },
+    { "packageId": "diamante", "venueId": "diamond", "day": "friday", "status": "available", "price": 9500 },
+    { "packageId": "diamante", "venueId": "diamond", "day": "saturday", "status": "available", "price": 10000 },
+    { "packageId": "diamante", "venueId": "diamond", "day": "sunday", "status": "available", "price": 6500 },
+    { "packageId": "deluxe", "venueId": "diamond", "day": "friday", "status": "available", "price": 10000 },
+    { "packageId": "deluxe", "venueId": "diamond", "day": "saturday", "status": "available", "price": 12000 },
+    { "packageId": "deluxe", "venueId": "diamond", "day": "sunday", "status": "available", "price": 7500 },
+    { "packageId": "gold", "venueId": "revolution", "day": "friday", "status": "not_sold", "price": null },
+    { "packageId": "gold", "venueId": "revolution", "day": "saturday", "status": "not_sold", "price": null },
+    { "packageId": "gold", "venueId": "revolution", "day": "sunday", "status": "available", "price": 3000 },
+    { "packageId": "platino", "venueId": "revolution", "day": "friday", "status": "available", "price": 3800 },
+    { "packageId": "platino", "venueId": "revolution", "day": "saturday", "status": "available", "price": 5000 },
+    { "packageId": "platino", "venueId": "revolution", "day": "sunday", "status": "available", "price": 3200 },
+    { "packageId": "diamante", "venueId": "revolution", "day": "friday", "status": "available", "price": 4800 },
+    { "packageId": "diamante", "venueId": "revolution", "day": "saturday", "status": "available", "price": 6500 },
+    { "packageId": "diamante", "venueId": "revolution", "day": "sunday", "status": "available", "price": 3800 },
+    { "packageId": "bs_basico", "venueId": "revolution", "day": null, "status": "available", "price": 2497 },
+    { "packageId": "bs_basico", "venueId": "diamond", "day": null, "status": "available", "price": 2999 },
+    { "packageId": "bs_completo", "venueId": "revolution", "day": null, "status": "available", "price": 2999 },
+    { "packageId": "bs_completo", "venueId": "diamond", "day": null, "status": "available", "price": 3500 }
+  ],
+  "guestAddOn": {
+    "babyShower": { "min": 35, "max": 45 },
+    "otherPackages": { "min": 45, "max": 55 }
+  },
+  "staffingTiers": [
+    {
+      "id": "lt_100",
+      "label": "Menos de 100 personas",
+      "guestMin": 1,
+      "guestMax": 99,
+      "totalStaff": 4,
+      "roles": { "coordinador": 1, "bartender": 1, "cocina": 1, "mesero": 1 }
+    },
+    {
+      "id": "eq_100",
+      "label": "100 personas",
+      "guestMin": 100,
+      "guestMax": 100,
+      "totalStaff": 6,
+      "roles": { "coordinador": 1, "bartender": 1, "cocina": 2, "mesero": 2 }
+    },
+    {
+      "id": "gte_120",
+      "label": "120 o más (máx. 200)",
+      "guestMin": 120,
+      "guestMax": 200,
+      "totalStaff": 8,
+      "roles": { "coordinador": 1, "bartender": 2, "cocina": 2, "mesero": 3 }
+    }
+  ],
+  "policies": {
+    "negotiable": [
+      "Service Fee",
+      "Tax",
+      "Cantidad de invitados",
+      "Servicios adicionales"
+    ],
+    "negotiableFeesNote": "Service Fee e Impuestos se muestran por defecto en toda cotización; son negociables solo con criterio comercial.",
+    "allowedSwaps": [
+      {
+        "fromServiceId": "limusina",
+        "toServiceId": "hora_loca",
+        "note": "Limusina ↔ Hora Loca"
+      }
+    ],
+    "tradeExamples": [
+      {
+        "id": "guests_for_service",
+        "text": "Se pueden agregar más invitados omitiendo o removiendo otros servicios del paquete (ejemplo: quitar Mesa de Quesos).",
+        "exampleRemoveServiceId": "mesa_quesos"
+      }
+    ],
+    "discount": {
+      "min": 500,
+      "max": 1000,
+      "requiresCompletePackage": true,
+      "note": "Solo en Paquete Completo se puede reducir entre $500 y $1,000 del precio final."
+    },
+    "nonNegotiable": [
+      "Precio por hora del salón (mínimo de contratación de 4 horas)"
+    ]
+  },
+  "contentNotes": [
+    {
+      "id": "capacity_vs_staffing",
+      "severity": "medium",
+      "pages": ["personal", "salones"],
+      "text": "Capacidades máximas: Diamond 200 / Revolution 70. El esquema de personal escala hasta 200 invitados; en Revolution no superar 70 pax aunque el staffing describa escenarios mayores."
+    },
+    {
+      "id": "saturday_priority",
+      "severity": "medium",
+      "pages": ["baby-shower", "paquetes"],
+      "text": "Priorizar siempre la reserva de sábados para paquetes de eventos grandes."
+    }
+  ]
+}
