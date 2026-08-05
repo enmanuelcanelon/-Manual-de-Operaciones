@@ -121,7 +121,7 @@ export function renderHome(state) {
 
       ${callout(
         "No negociable",
-        "El precio por hora del salón (mínimo 4 horas) es estrictamente no negociable.",
+        "El precio por hora del salón (mínimo 4 horas) es estrictamente no negociable. Los sábados no son negociables en ningún paquete ni salón.",
         "danger",
         "⛔"
       )}
@@ -363,10 +363,16 @@ export function renderPaquetes(state, query = {}) {
         </table>
       </div>
       <p class="tiny faint" style="margin-top:0.5rem">+${catalog.fees.serviceFeePercent}% Service Fee y +${catalog.fees.taxPercent}% Tax se aplican por defecto a toda cotización de paquete.</p>
+      ${callout(
+        "Sábados no negociables",
+        "En ningún paquete ni salón se negocia el sábado (precio, descuentos ni condiciones).",
+        "danger",
+        "⛔"
+      )}
     </section>
 
     <section class="section">
-      <h2>Paquetes — ${dayLabel(day)}</h2>
+      <h2>Paquetes — ${dayLabel(day)} ${day === "saturday" ? badge("No negociable", "danger") : ""}</h2>
       <div class="grid-auto">
         ${eventPkgs
           .map((pkg) => {
