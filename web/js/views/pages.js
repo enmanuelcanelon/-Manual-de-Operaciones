@@ -461,8 +461,19 @@ export function renderPaqueteDetalle(state, packageId, query = {}) {
           ${badge(`+${catalog.fees.serviceFeePercent}% fee`)}
           ${badge(`+${catalog.fees.taxPercent}% tax`)}
           ${pkg.isCompletePackage ? badge("Paquete completo", "ok") : badge("No es paquete completo", "warn")}
+          ${day === "saturday" ? badge("Sábado no negociable", "danger") : ""}
         </div>
         ${priceBlock}
+        ${
+          day === "saturday"
+            ? callout(
+                "Sábado no negociable",
+                "Este día no admite negociación de precio, descuentos ni condiciones en ningún paquete ni salón.",
+                "danger",
+                "⛔"
+              )
+            : ""
+        }
         <p class="small muted" style="margin:0">Base del paquete. Los cargos 18% + 7% se aplican por defecto al cotizar.</p>
 
         ${

@@ -2,3 +2,5 @@
 .DS_Store
 *.log
 .Thumbs.db
+.vercel-out/
+.vercel/

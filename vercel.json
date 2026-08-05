@@ -1,0 +1,8 @@
+{
+  "buildCommand": "mkdir -p .vercel-out && cp -r web/. .vercel-out/",
+  "outputDirectory": ".vercel-out",
+  "installCommand": "echo 'no install'",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false
+}

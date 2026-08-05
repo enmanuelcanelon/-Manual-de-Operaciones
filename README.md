@@ -8,7 +8,19 @@ Los archivos Markdown (`01`–`04`) se mantienen como referencia histórica. La 
 web/data/seed.json
 ```
 
-## Cómo abrirlo
+## Despliegue en Vercel
+
+El sitio vive en la carpeta `web/`. El repo incluye `vercel.json` para copiarla al output del deploy.
+
+En el dashboard de Vercel (si el 404 sigue):
+
+1. **Project → Settings → General → Root Directory** → deja vacío (raíz del repo) **o** pon `web` y borra el `buildCommand` custom.
+2. Framework Preset: **Other**.
+3. Redeploy.
+
+URL esperada: la raíz del dominio (con `vercel.json`) o `/web/` si solo se publica el repo estático.
+
+## Cómo abrirlo (local)
 
 **No abras el HTML con doble clic (`file://`).** Hay que servirlo por HTTP.
 
