@@ -126,6 +126,27 @@ export function renderHome(state) {
         "⛔"
       )}
 
+      ${callout(
+        "Reserva: depósito $500 — no reembolsable",
+        catalog.policies.reservation?.note ||
+          "La reserva requiere un depósito de $500. El depósito no es reembolsable. Siempre decírselo al cliente.",
+        "danger",
+        "⚠"
+      )}
+
+      <section class="section">
+        <h2>Información general</h2>
+        <div class="card">
+          <ul>
+            <li><strong>Depósito de reserva:</strong> ${formatMoney(catalog.policies.reservation?.depositAmount ?? 500)} — <strong>no reembolsable</strong>.</li>
+            <li>Comunicar siempre al cliente al cotizar y al cerrar la reserva.</li>
+            <li>Service Fee ${fees.serviceFeePercent}% + Tax ${fees.taxPercent}% por defecto en paquetes.</li>
+            <li>Sábados no negociables en ningún paquete ni salón.</li>
+            <li>Precio por hora del salón (mín. 4 h) no negociable.</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="section">
         <h2>Accesos rápidos</h2>
         <div class="quick-links">
