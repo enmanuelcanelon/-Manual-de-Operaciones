@@ -161,7 +161,7 @@
   "packagePrices": [
     { "packageId": "platino", "venueId": "diamond", "day": "friday", "status": "available", "price": 8500 },
     { "packageId": "platino", "venueId": "diamond", "day": "saturday", "status": "available", "price": 8500 },
-    { "packageId": "platino", "venueId": "diamond", "day": "sunday", "status": "available", "price": 5000 },
+    { "packageId": "platino", "venueId": "diamond", "day": "sunday", "status": "available", "price": 6500 },
     { "packageId": "diamante", "venueId": "diamond", "day": "friday", "status": "available", "price": 9500 },
     { "packageId": "diamante", "venueId": "diamond", "day": "saturday", "status": "available", "price": 10000 },
     { "packageId": "diamante", "venueId": "diamond", "day": "sunday", "status": "available", "price": 6500 },
